@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
     <title>华东交通大学计算机紧急响应组</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
@@ -16,15 +17,17 @@
             background-image: url(images/banner.jpg);
             background-size: cover;
         }
-        .row1{
+        .row{
             background-attachment: fixed;
+            background-size: cover;
+            position: relative;
+        }
+        .row1{
             background-color: #272833;
             background-image: url("images/banner2.jpg");
             background-position: center center;
-            background-size: cover;
             box-shadow: 0 0.25vw 0.5vw 0 rgba(0, 0, 0, 0.25);
             min-height: 100vh;
-            position: relative;
             text-align: center;
             z-index: 21;
         }
@@ -48,21 +51,22 @@
         .content .bannerWord{
             display: inline-block;
             vertical-align: middle;
-            text-align: left;
+            text-align: center;
+            margin-left: 2rem;
         }
         .content header p {
-            letter-spacing: 0.4vw;
-            text-indent: 4.5vw;
-            line-height: 2vw;
+            letter-spacing: 0.5rem;
+            line-height: 2em;
             color:white;
+            text-indent: 0.2rem;
         }
         .content header h2{
-            font-size: 2.8vw;
+            font-size: 4.5rem;
             color: white;
-            line-height: 2vw;
+            line-height: 3.5rem;
         }
         .content header h2 span{
-            font-size: 4vw;
+            font-size: 5rem;
             padding-right: 1vw;
             padding-left: 2vw;
         }
@@ -78,7 +82,7 @@
             margin-bottom: 0px;
         }
         #nav-title{
-            font-size: 1vw;
+            font-size: 2rem;
             -moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
             -webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
             -ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -90,7 +94,7 @@
             color: #e44c65;
         }
         #nav-title1{
-            font-size: 1vw;
+            font-size: 2rem;
             -moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
             -webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
             -ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -102,7 +106,7 @@
             color: #e44c65;
         }
         #nav-title2{
-            font-size: 1vw;
+            font-size: 2rem;
             -moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
             -webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
             -ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -114,7 +118,7 @@
             color: #e44c65;
         }
         #nav-title3{
-            font-size: 1vw;
+            font-size: 2rem;
             -moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
             -webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
             -ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -126,7 +130,7 @@
             color: #e44c65;
         }
         #nav-title4{
-            font-size: 1vw;
+            font-size: 2rem;
             -moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
             -webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
             -ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -150,28 +154,110 @@
             background-color: white;
         }
         .next{
-          display: block;
-          font-size: 1.2vw;  
-          margin-top: 5vw;
-          text-align: center;
-          color: white;
+            display: block;
+            font-size: 2rem;
+            margin-top: -2em;
+            text-align: center;
+            color: white;
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            top: 90%;
         }
         .next:hover,.next:visited,.next:active,a:link{
             text-decoration: none;
-            color: #e44c65;
+            color: white;
         }
         .row2{
-           width: 100vw;
-           height: 50vh; 
-           background-attachment: fixed;
-           background-size: cover;
+           min-height: 100vh; 
         }
         #one{
-            background-image: url(images/pic02.jpg);
-
+            background-image: url(images/209068-106.jpg);
+            background-position: center center;
         }
         #two{
             background-image: url(images/pic03.jpg);
+        }
+        .row3{
+            margin: 0; 
+            min-height: 60vh;
+            box-shadow: 0 0.25vw 0.5vw 0 rgba(0, 0, 0, 0.25);
+        }
+        .row4{
+            margin: 0; 
+            min-height: 40vh; 
+            background-color: rgba(21,27,30,0.90);
+        }
+        .aboutWord{
+            height: 40vh;
+            border-right: 1px solid #e8e8e8;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .aboutWord h2,.aboutWord p{
+            color: white;
+        }
+        .next1{
+            left: 49.5%;
+        }
+        .clear
+        {
+            clear: both;
+        }       
+        .box
+        {
+            position: relative;
+            width: 58vh;
+            left: -120vh;
+            margin: 12vh auto;
+        }
+        .lineF, .lineS
+        {
+            position: absolute;
+            visibility: hidden;
+        }
+        .lineF{
+            left: -120vh;
+        }
+        .lineS
+        {
+            top: 17vh;
+            left: 9vh;
+        }
+        .boxF, .boxS, .boxT, .overlay
+        {
+            width: 16vh;
+            height: 18vh;
+            overflow: hidden;
+        }
+        .boxF, .boxS
+        {
+            visibility: hidden;
+        }
+        .boxF
+        {
+            transform: rotate(120deg);
+            float: left;
+            margin-left: 2.3vh;
+            -ms-transform: rotate(120deg);
+            -moz-transform: rotate(120deg);
+            -webkit-transform: rotate(120deg);
+        }
+        .boxS
+        {
+            transform: rotate(-60deg);
+            -ms-transform: rotate(-60deg);
+            -moz-transform: rotate(-60deg);
+            -webkit-transform: rotate(-60deg);
+        }
+        .boxT
+        {
+            transform: rotate(-60deg);
+            background: no-repeat 50% center;
+            background-size: 125% auto;
+            -ms-transform: rotate(-60deg);
+            -moz-transform: rotate(-60deg);
+            -webkit-transform: rotate(-60deg);
+            visibility: visible;
         }
     </style>
 </head>
@@ -203,18 +289,117 @@
                     <img src="images/pic01.jpg" alt="响应组图标">
                 </span>
                 <header class="bannerWord">
-                    <h2><span>"</span>Hello Cert</h2>
-                    <p>欢迎来到C&nbsp;E&nbsp;R&nbsp;T</p>
+                    <h2>Hello CERT</h2>
+                    <p>欢迎来到计算机紧急响应组</p>
                 </header>
             </div>
-            <a href="#one" class="glyphicon glyphicon-chevron-down next"></a>
+            <a href="javascript:;" class="glyphicon glyphicon-chevron-down next" id="next1"></a>
         </div>
         <div class="row row2" id="one">
-            
+            <div class="row row3" id="icons">
+                <div class="box">
+                    <!--第一行(lineFirst)-->
+                    <div class="lineF">
+                        <div class="boxF">
+                            <div class="boxS">
+                                <div class="boxT" style="background-image: url(images/pic01.jpg);">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxF">
+                            <div class="boxS">
+                                <div class="boxT" style="background-image: url(images/pic01.jpg);">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxF">
+                            <div class="boxS">
+                                <div class="boxT" style="background-image: url(images/pic01.jpg);">
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--第二行(lineSecond)-->
+                    <div class="lineS">
+                        <div class="boxF">
+                            <div class="boxS">
+                                <div class="boxT" style="background-image: url(images/pic01.jpg);">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxF">
+                            <div class="boxS">
+                                <div class="boxT" style="background-image: url(images/pic01.jpg);">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row4" id="about">
+                <div class="col-md-3 aboutWord">
+                    <div class="aboutTitle">
+                        <h2>技术研发部</h2>
+                    </div>
+                    <div class="aboutContent">
+                        <p>我的妈妈们阿玛妈妈妈妈</p>
+                    </div>
+                </div>
+                <div class="col-md-3 aboutWord">
+                    
+                </div>
+                <div class="col-md-3 aboutWord">
+                    
+                </div>
+                <div class="col-md-3 aboutWord">
+                    
+                </div>
+            </div>
         </div>
         <div class="row row2" id="two">
             
         </div>
     </div>
 </body>
+<script type="text/javascript">
+                $(document).ready(function(){
+                $.extend({
+                    'goAnchor':function(to, time){
+                        $obj = (window.opera)?(document.compatMode=="CSS1Compat"?$('html'):$('body')):$('html,body');
+                        $($obj).animate({scrollTop:to}, time);
+                    }
+                });
+                //
+                $('#next1').click(function(){
+                    $.goAnchor($('#one').offset().top, 1000);
+                    $("#one .box").animate({
+                        left:0
+                    },1000);
+                    $("#one .lineF").animate({
+                        left:0
+                    },1000);
+                    $("#one .bannerWord").fadeIn();
+                });
+                setInterval('play()',100);
+                });
+                function play(){
+                    var mTop = $('#one').offset().top;
+                    var sTop = $(window).scrollTop();
+                    var result = mTop - sTop;
+                    if(result<998){
+                       $("#one .box").animate({
+                           left:0
+                       },1000);
+                       $("#one .lineF").animate({
+                           left:0
+                       },1000); 
+                   }
+                    }
+            </script>
 </html>
