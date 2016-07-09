@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>华东交通大学计算机紧急响应组</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <style type="text/css">
+        body{
+            height: 100%;
+            width: 100%;
+        }
+        .container{
+            height: 100%;
+            background-image: url(images/banner.jpg);
+            background-size: cover;
+        }
+        .row1{
+            background-attachment: fixed;
+            background-color: #272833;
+            background-image: url("images/banner2.jpg");
+            background-position: center center;
+            background-size: cover;
+            box-shadow: 0 0.25vw 0.5vw 0 rgba(0, 0, 0, 0.25);
+            min-height: 100vh;
+            position: relative;
+            text-align: center;
+            z-index: 21;
+        }
+        #banner .content{
+            display: inline-block;
+            margin-right: 1%;
+            max-width: 95%;
+            padding: 13.3vw;
+            position: relative;
+            text-align: center;
+            vertical-align: middle;
+            z-index: 1;
+        }
+        .logo{
+            border-radius: 100%;
+            display: inline-block;
+            height: 16vw;
+            vertical-align: middle;
+            width: 16vw;
+        }
+        .content .bannerWord{
+            display: inline-block;
+            vertical-align: middle;
+            text-align: left;
+        }
+        .content header p {
+            letter-spacing: 0.4vw;
+            text-indent: 4.5vw;
+            line-height: 2vw;
+            color:white;
+        }
+        .content header h2{
+            font-size: 2.8vw;
+            color: white;
+            line-height: 2vw;
+        }
+        .content header h2 span{
+            font-size: 4vw;
+            padding-right: 1vw;
+            padding-left: 2vw;
+        }
+        .logo img{
+            border-radius: 100%;
+            display: block;
+            width: 100%;
+        }
+        .navbar-default{
+            border: none;
+            border-radius: 0;
+            background-color: rgba(0, 0, 0, 0);
+            margin-bottom: 0px;
+        }
+        #nav-title{
+            font-size: 1vw;
+            -moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            -webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            -ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            
+            text-decoration: none;
+        }
+        #nav-title:hover{
+            color: #e44c65;
+        }
+        #nav-title1{
+            font-size: 1vw;
+            -moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            -webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            -ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            
+            text-decoration: none;
+        }
+        #nav-title1:hover{
+            color: #e44c65;
+        }
+        #nav-title2{
+            font-size: 1vw;
+            -moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            -webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            -ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            
+            text-decoration: none;
+        }
+        #nav-title2:hover{
+            color: #e44c65;
+        }
+        #nav-title3{
+            font-size: 1vw;
+            -moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            -webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            -ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            
+            text-decoration: none;
+        }
+        #nav-title3:hover{
+            color: #e44c65;
+        }
+        #nav-title4{
+            font-size: 1vw;
+            -moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            -webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            -ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            
+            text-decoration: none;
+        }
+        #nav-title4:hover{
+            color: #e44c65;
+        }
+        .nav-more{
+            float: right;
+        }
+        .navbar-default .navbar-toggle{
+            border: none;
+        }
+        .navbar-default .navbar-toggle:hover{
+            background-color: #e44c65;
+        }
+        .navbar-default .navbar-toggle:hover span{
+            background-color: white;
+        }
+        .next{
+          display: block;
+          font-size: 1.2vw;  
+          margin-top: 5vw;
+          text-align: center;
+          color: white;
+        }
+        .next:hover,.next:visited,.next:active,a:link{
+            text-decoration: none;
+            color: #e44c65;
+        }
+        .row2{
+           width: 100vw;
+           height: 50vh; 
+           background-attachment: fixed;
+           background-size: cover;
+        }
+        #one{
+            background-image: url(images/pic02.jpg);
+
+        }
+        #two{
+            background-image: url(images/pic03.jpg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row row1" id="banner">
+            <nav class="navbar navbar-default" role="navigation">
+           <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" 
+                       data-target="#example-navbar-collapse">
+                       <span class="sr-only">切换导航</span>
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                       <span class="icon-bar"></span>
+                </button>
+              <a class="navbar-brand" id="nav-title" href="#">计算机紧急响应组</a>
+           </div>
+           <div class="collapse navbar-collapse nav-more" id="example-navbar-collapse">
+              <ul class="nav navbar-nav">
+                 <li><a href="#" id="nav-title1">艺术展</a></li>
+                 <li><a href="#" id="nav-title2">名人堂</a></li>
+                 <li><a href="#" id="nav-title3">作品秀</a></li>
+                 <li><a href="#" id="nav-title4">分享区</a></li>
+              </ul>
+           </div>
+            </nav>
+            <div class="content">
+                <span class="logo">
+                    <img src="images/pic01.jpg" alt="响应组图标">
+                </span>
+                <header class="bannerWord">
+                    <h2><span>"</span>Hello Cert</h2>
+                    <p>欢迎来到C&nbsp;E&nbsp;R&nbsp;T</p>
+                </header>
+            </div>
+            <a href="#one" class="glyphicon glyphicon-chevron-down next"></a>
+        </div>
+        <div class="row row2" id="one">
+            
+        </div>
+        <div class="row row2" id="two">
+            
+        </div>
+    </div>
+</body>
+</html>
