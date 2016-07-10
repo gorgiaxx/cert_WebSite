@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
     <title>华东交通大学计算机紧急响应组</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -158,18 +159,22 @@
             font-size: 2rem;
             margin-top: -2em;
             text-align: center;
-            color: white;
+            color: #fa7676;
             position: absolute;
             bottom: 0px;
             left: 50%;
             top: 90%;
+            background-image: url(images/arrow.png);
+            width: 8rem;
+            background-position: center center; 
         }
         .next:hover,.next:visited,.next:active,a:link{
             text-decoration: none;
             color: white;
         }
         .row2{
-           min-height: 100vh; 
+           min-height: 100vh;
+           box-shadow: 0 0.25vw 0.5vw 0 rgba(0, 0, 0, 0.25); 
         }
         #one{
             background-image: url(images/209068-106.jpg);
@@ -177,6 +182,7 @@
         }
         #two{
             background-image: url(images/pic03.jpg);
+            box-shadow: 0 0.25vw 0.5vw 0 rgba(0, 0, 0, 0.25);
         }
         .row3{
             margin: 0; 
@@ -187,14 +193,30 @@
             margin: 0; 
             min-height: 40vh; 
             background-color: rgba(21,27,30,0.90);
+            border-top:0.4em solid #e44c65; 
+            box-shadow: 0 0.25vw 0.5vw 0 rgba(0, 0, 0, 0.25);
         }
         .aboutWord{
             height: 40vh;
-            border-right: 1px solid #e8e8e8;
-            border-bottom: 1px solid #e8e8e8;
+            text-align: center;
+            padding: 0;
+            padding-top: 3em;
         }
-        .aboutWord h2,.aboutWord p{
+        .aboutWord h2,.aboutWord h3,.aboutWord p{
             color: white;
+        }
+        .titleEng{
+            font-size: 0.9em;
+        }
+        .aboutTitle h2,.aboutTitle h3{
+            margin: 0;
+            display: block;
+        }
+        .aboutTitle{
+            margin-bottom: 1em;
+        }
+        .aboutTitle p{
+            display: block;
         }
         .next1{
             left: 49.5%;
@@ -226,7 +248,7 @@
         .boxF, .boxS, .boxT, .overlay
         {
             width: 16vh;
-            height: 18vh;
+            height: 19vh;
             overflow: hidden;
         }
         .boxF, .boxS
@@ -258,6 +280,110 @@
             -moz-transform: rotate(-60deg);
             -webkit-transform: rotate(-60deg);
             visibility: visible;
+        }
+        .overlay
+        {
+            transition: all 250ms ease-in-out 0s;
+            display: none;
+            position: relative;
+        }
+        .boxT:hover .overlay1
+        {
+            display: block;
+            background-image: url(images/pic15.png);
+            background-size: cover;
+        }
+        .boxT:hover .overlay2
+        {
+            display: block;
+            background-image: url(images/pic16.png);
+            background-size: cover;
+        }
+        .boxT:hover .overlay3
+        {
+            display: block;
+            background-image: url(images/pic17.png);
+            background-size: cover;
+        }
+        .boxT:hover .overlay4
+        {
+            display: block;
+            background-image: url(images/pic18.png);
+            background-size: cover;
+        }
+        .boxT:hover .overlay5
+        {
+            display: block;
+            background-image: url(images/pic19.png);
+            background-size: cover;
+        }
+        #four{
+            background-color: #272833;
+            height: 30vh;
+        }
+        .slide{
+            height: 100vh;
+            background-image: url(images/blog-2.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 0;
+            border-left: 0.5em solid #5480F1;
+            overflow: hidden;
+            position: relative;
+        }
+        .slideRight{
+            border-right: 0.5em solid #39c088;
+            border-left: none;
+        }
+        .register{
+            background-image: url();
+        }
+        .border{
+            width: 0.6em;
+            height: 50px;
+            background-color: #e44c65;
+            display: inline-block;
+            position: relative;
+            top: 0.6em;
+        }
+        .titleCenter{
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .highlight{
+            background-color: rgba(21,45,64,0.7);
+        }
+        .aboutContent p{
+            font-size: 1.5em;
+        }
+        #footer .copyright {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 1.2em;
+            line-height: 2em;
+            padding: 0;
+            text-align: center;
+        }
+        ul.icons {
+            cursor: default;
+            list-style: none;
+            padding-left: 0;
+            display: block;
+            margin: 7em auto 2em auto;
+            text-align: center;
+        }
+        ul.icons li {
+            display: inline-block;
+            height: 2.5em;
+            line-height: 2.5em;
+            padding: 0 0.5em;
+        }
+        .icon {
+            font-size: 2.2em;
+            letter-spacing: 1em;
+            color: white;
+        }
+        ul.icons li a:hover .icon{
+            color: #E44c65;
         }
     </style>
 </head>
@@ -293,7 +419,7 @@
                     <p>欢迎来到计算机紧急响应组</p>
                 </header>
             </div>
-            <a href="javascript:;" class="glyphicon glyphicon-chevron-down next" id="next1"></a>
+            <a href="javascript:;" class="next" id="next1"></a>
         </div>
         <div class="row row2" id="one">
             <div class="row row3" id="icons">
@@ -302,22 +428,25 @@
                     <div class="lineF">
                         <div class="boxF">
                             <div class="boxS">
-                                <div class="boxT" style="background-image: url(images/pic01.jpg);">
-                                    
+                                <div class="boxT" style="background-image: url(images/pic10.png);">
+                                    <div class="overlay overlay1">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="boxF">
                             <div class="boxS">
-                                <div class="boxT" style="background-image: url(images/pic01.jpg);">
-                                    
+                                <div class="boxT" style="background-image: url(images/pic11.png);">
+                                    <div class="overlay overlay2">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="boxF">
                             <div class="boxS">
-                                <div class="boxT" style="background-image: url(images/pic01.jpg);">
-                                    
+                                <div class="boxT" style="background-image: url(images/pic12.png);">
+                                    <div class="overlay overlay3">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -327,15 +456,17 @@
                     <div class="lineS">
                         <div class="boxF">
                             <div class="boxS">
-                                <div class="boxT" style="background-image: url(images/pic01.jpg);">
-                                    
+                                <div class="boxT" style="background-image: url(images/pic13.png);">
+                                    <div class="overlay overlay4">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="boxF">
                             <div class="boxS">
-                                <div class="boxT" style="background-image: url(images/pic01.jpg);">
-                                    
+                                <div class="boxT" style="background-image: url(images/pic14.png);">
+                                    <div class="overlay overlay5">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -343,32 +474,106 @@
                 </div>
             </div>
             <div class="row row4" id="about">
-                <div class="col-md-3 aboutWord">
+                <div class="col-md-3 aboutWord" id="about1">
                     <div class="aboutTitle">
-                        <h2>技术研发部</h2>
+                        <span class="border"></span>
+                        <div class="titleCenter">
+                        <h2>&nbsp;&nbsp;&nbsp;&nbsp;技术研发&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                        <h3 class="titleEng">Technology Development</h3>
+                        </div>
+                        <span class="border"></span>
                     </div>
                     <div class="aboutContent">
-                        <p>我的妈妈们阿玛妈妈妈妈</p>
+                        <p>我们是这里最热衷于编程的coder</p>
+                        <p>我们执着于最完美的程序</p>
+                        <p>C++？PHP？HTML?Java？</p>
+                        <p>这些，是我们永恒不变的信仰</p>
                     </div>
                 </div>
-                <div class="col-md-3 aboutWord">
-                    
+                <div class="col-md-3 aboutWord" id="about2">
+                    <div class="aboutTitle">
+                        <span class="border"></span>
+                        <div class="titleCenter">
+                        <h2>&nbsp;&nbsp;&nbsp;&nbsp;产品设计&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                        <h3 class="titleEng" style="letter-spacing: 0.2em;">Product Design</h3>
+                        </div>
+                        <span class="border"></span>
+                    </div>
+                    <div class="aboutContent">
+                        <p>这里是大触，射鸡湿，产品汪们的聚集地</p>
+                        <p>如果你热爱互联网，对互联网产品感兴趣
+</p>
+                        <p>喜爱设计艺术，想研发属于自己的产品
+</p>
+                        <p>还等什么，赶快加入我们吧~
+</p>
+                    </div>
                 </div>
-                <div class="col-md-3 aboutWord">
-                    
+                <div class="col-md-3 aboutWord" id="about3">
+                    <div class="aboutTitle">
+                        <span class="border"></span>
+                        <div class="titleCenter">
+                        <h2>&nbsp;&nbsp;&nbsp;&nbsp;硬件维修&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                        <h3 class="titleEng">Hardware Maintenance</h3>
+                        </div>
+                        <span class="border"></span>
+                    </div>
+                    <div class="aboutContent">
+                        <p>爱机故障了？我们帮你解决！</p>
+                        <p>我们有着最精湛的电脑维修技术</p>
+                        <p>给你提供最快最优质的服务</p>
+                        <p>同时教你如何从入门到精通</p>
+                    </div>
                 </div>
-                <div class="col-md-3 aboutWord">
-                    
+                <div class="col-md-3 aboutWord" id="about4">
+                    <div class="aboutTitle">
+                        <span class="border"></span>
+                        <div class="titleCenter">
+                        <h2>&nbsp;&nbsp;&nbsp;&nbsp;创意策划&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                        <h3 class="titleEng" style="letter-spacing: 0.1em;">Creative Planning</h3>
+                        </div>
+                        <span class="border"></span>
+                    </div>
+                    <div class="aboutContent">
+                        <p>我们有着最具创意的大脑</p>
+                        <p>精心策划着社团的每一项活动</p>
+                        <p>我们不仅是在背后安排好一切的大boss</p>
+                        <p>也是活跃在微博&微信上的段子手</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row row2" id="two">
+        <!-- 报名表 -->
+        <div class="row row2" id="three">
+            <div class="col-md-9" class="register">
+                
+            </div>
+            <div class="col-md-3 slide slideRight">
+                
+            </div>
             
+            <a href="javascript:;" class="next" id="next4"></a>
+        </div>
+        <div class="row" id="four">
+            <footer id="footer">
+                <ul class="icons">
+                    <li><a href=""><span class="icon icon-wechat"></span></a></li>
+                    <li><a href=""><span class="icon icon-sina-weibo"></span></a></li>
+                    <li><a href=""><span class="icon icon-github"></span></a></li>
+                    <li><a href=""><span class="icon icon-mail4"></span></a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>© 华东交通大学 现代教育技术中心 <a href="ecjtu.org">计算机紧急响应组 </a>交大蓝盾 赣ICP12003533号-1</li>
+                    <li>Design & Layout: <a href="ecjtu.org">
+                        LinLiang & Lijie
+                    </a></li>
+                </ul>
+            </footer>
         </div>
     </div>
 </body>
 <script type="text/javascript">
-                $(document).ready(function(){
+                $(function(){
                 $.extend({
                     'goAnchor':function(to, time){
                         $obj = (window.opera)?(document.compatMode=="CSS1Compat"?$('html'):$('body')):$('html,body');
@@ -386,7 +591,17 @@
                     },1000);
                     $("#one .bannerWord").fadeIn();
                 });
+                $('#next2').click(function(){
+                    $.goAnchor($('#two').offset().top, 1000);
+                });
+                $('#next3').click(function(){
+                    $.goAnchor($('#three').offset().top, 1000);
+                });
+                $('#next4').click(function(){
+                    $.goAnchor($('#four').offset().top, 1000);
+                });
                 setInterval('play()',100);
+                high();
                 });
                 function play(){
                     var mTop = $('#one').offset().top;
@@ -400,6 +615,35 @@
                            left:0
                        },1000); 
                    }
-                    }
+                    };
+                function high(){
+                    var box=$(".overlay");
+                    var about=$("#about .aboutWord");
+                    $(box[0]).mouseover(function(){
+                        $("#about1").addClass("highlight");
+                    }).mouseout(function(){
+                        $("#about1").removeClass("highlight");
+                    });
+                    $(box[1]).mouseover(function(){
+                        $("#about2").addClass("highlight");
+                    }).mouseout(function(){
+                        $("#about2").removeClass("highlight");
+                    });
+                    $(box[2]).mouseover(function(){
+                        $("#about3").addClass("highlight");
+                    }).mouseout(function(){
+                        $("#about3").removeClass("highlight");
+                    });
+                    $(box[3]).mouseover(function(){
+                        $("#about4").addClass("highlight");
+                    }).mouseout(function(){
+                        $("#about4").removeClass("highlight");
+                    });
+                    $(box[0]).mouseover(function(){
+                        $("#about1").addClass("highlight");
+                    }).mouseout(function(){
+                        $("#about1").removeClass("highlight");
+                    });
+                }
             </script>
 </html>
