@@ -12,6 +12,8 @@
         body{
             height: 100%;
             width: 100%;
+            overflow-x: hidden; 
+            font-family: "Microsoft YaHei";
         }
         .container{
             height: 100%;
@@ -22,6 +24,8 @@
             background-attachment: fixed;
             background-size: cover;
             position: relative;
+            overflow-y: hidden; 
+            overflow-x: hidden; 
         }
         .row1{
             background-color: #272833;
@@ -160,13 +164,15 @@
             margin-top: -2em;
             text-align: center;
             color: #fa7676;
-            position: absolute;
-            bottom: 0px;
-            left: 50%;
-            top: 90%;
+            margin: 0 auto;
+            height: 4.9vh;
             background-image: url(images/arrow.png);
             width: 8rem;
-            background-position: center center; 
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        #next1{
+            margin-top: 6vh;
         }
         .next:hover,.next:visited,.next:active,a:link{
             text-decoration: none;
@@ -175,6 +181,7 @@
         .row2{
            min-height: 100vh;
            box-shadow: 0 0.25vw 0.5vw 0 rgba(0, 0, 0, 0.25); 
+           overflow-x: hidden;
         }
         #one{
             background-image: url(images/209068-106.jpg);
@@ -287,57 +294,38 @@
             display: none;
             position: relative;
         }
+        .boxT:hover .overlay{
+            display: block;
+            background-size: cover;
+        }
         .boxT:hover .overlay1
         {
-            display: block;
             background-image: url(images/pic15.png);
-            background-size: cover;
         }
         .boxT:hover .overlay2
         {
-            display: block;
             background-image: url(images/pic16.png);
-            background-size: cover;
         }
         .boxT:hover .overlay3
         {
-            display: block;
             background-image: url(images/pic17.png);
-            background-size: cover;
         }
         .boxT:hover .overlay4
         {
-            display: block;
             background-image: url(images/pic18.png);
-            background-size: cover;
         }
         .boxT:hover .overlay5
         {
-            display: block;
             background-image: url(images/pic19.png);
-            background-size: cover;
         }
         #four{
             background-color: #272833;
             height: 30vh;
-        }
-        .slide{
-            height: 100vh;
-            background-image: url(images/blog-2.jpg);
-            background-size: cover;
-            background-attachment: fixed;
+            min-height: 250px;
+            margin: 0;
             padding: 0;
-            border-left: 0.5em solid #5480F1;
-            overflow: hidden;
-            position: relative;
         }
-        .slideRight{
-            border-right: 0.5em solid #39c088;
-            border-left: none;
-        }
-        .register{
-            background-image: url();
-        }
+        
         .border{
             width: 0.6em;
             height: 50px;
@@ -354,7 +342,7 @@
             background-color: rgba(21,45,64,0.7);
         }
         .aboutContent p{
-            font-size: 1.5em;
+            font-size: 1.2em;
         }
         #footer .copyright {
             color: rgba(255, 255, 255, 0.5);
@@ -384,6 +372,162 @@
         }
         ul.icons li a:hover .icon{
             color: #E44c65;
+        }
+        .slideBto{
+            width: 4vh;
+            height: 17vh;
+            background-image: url(images/pic20.png);
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            top: 40%;
+            right: 0;
+        }
+        .slide{
+            height: 100vh;
+            /*background-image: url(images/blog-2.jpg);*/
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 0;
+            border-left: 0.5em solid #5480F1;
+            overflow: hidden;
+            position: relative;
+        }
+        .slideRight{
+            border-left: none;
+            min-width: 25vw;
+            height: 95vh;
+            background-color: #f85670; 
+            position: absolute;
+            right: -115vw;
+            top: 5vh;
+        }
+        .register{
+            width: 100%;
+            height: 100vh;
+            float: left;
+        }
+        #three{
+            background-image: url(images/pic21.png);
+            overflow-y: hidden;
+            margin: 0;
+            padding: 0;
+            min-height: 635px;
+        }
+        .registerTop{
+            background-color: #219e56;
+            width: 100vw;
+            height: 5vh;
+            text-align: center;
+        }
+        .registerTop h2{
+            color: white;
+            font-size: 2em;
+            line-height: 5vh;
+            margin: 0;
+        }
+        .slideRightTop p{
+            color: white;
+            font-size: 2em;
+            line-height: 1em;
+        }
+        .slideForm{
+            text-align: left;
+            padding-left: 2em;
+            padding-right: 2em;
+            margin-top: 5em;
+        }
+        .slideForm .infoP{
+            color: white;
+            font-size: 1.2em;
+            padding-left: 5em;
+        }
+        .form-group{
+            height: 3em;
+        }
+        .btn-soul{
+                background-color: rgba(0,0,0,0);
+                border: 1px solid white;
+                color: white;
+                width: 5em;
+                height: 2em;
+                font-size: 1.3em;
+                margin-top: 1.5vh;
+                margin-left: 4.6em;
+        }
+        .btn-soul:hover{
+            background-color: white;
+            color: #f85670;
+        }
+        .control-label{
+            font-weight: normal;
+            color: white;
+            font-size: 2em;
+            text-align: left;
+            margin: 0;
+            padding: 0; 
+        }
+        .form-control{
+            background-color: rgba(255,255,255,0);
+            border: 2px solid #fff;
+            border-radius: 5px;
+            color: white;
+            height: 3em;
+        }
+        .form-control option{
+            color: black;
+        }
+        .col-md-9{
+            padding: 0; 
+        }
+        @media screen and (max-width: 991px){
+
+        .form-group {
+            height: 5em;
+        }
+        .slideRight{
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            min-height: 635px;
+        }
+        .registerTop{
+            display: none;
+        }
+        }
+        @media screen and (max-width: 390px) { /*当屏幕尺寸小于1569px时，应用下面的CSS样式*/  
+        .show img{
+            display: none;
+        }
+        .slideRight{
+            left: 0;
+        }
+        .back{
+            display: none;
+        }
+        }
+        #about5{
+            width: 200vh;
+            left: 0vh;
+            display: none;
+        }
+        .show img{
+            position: relative;
+        }
+        .back{
+            font-size: 2em;
+            color: white;
+        }
+        #next2{
+            position: absolute;
+            z-index: 10;
+            left: 48%;
+            bottom: 35px;
+        }
+        @media screen and (max-width: 1250px){
+            #next2{
+                display: none;
+            }
         }
     </style>
 </head>
@@ -478,7 +622,7 @@
                     <div class="aboutTitle">
                         <span class="border"></span>
                         <div class="titleCenter">
-                        <h2>&nbsp;&nbsp;&nbsp;&nbsp;技术研发&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                        <h2>&nbsp;&nbsp;技术研发&nbsp;&nbsp;</h2>
                         <h3 class="titleEng">Technology Development</h3>
                         </div>
                         <span class="border"></span>
@@ -494,26 +638,23 @@
                     <div class="aboutTitle">
                         <span class="border"></span>
                         <div class="titleCenter">
-                        <h2>&nbsp;&nbsp;&nbsp;&nbsp;产品设计&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                        <h2>&nbsp;&nbsp;产品设计&nbsp;&nbsp;</h2>
                         <h3 class="titleEng" style="letter-spacing: 0.2em;">Product Design</h3>
                         </div>
                         <span class="border"></span>
                     </div>
                     <div class="aboutContent">
                         <p>这里是大触，射鸡湿，产品汪们的聚集地</p>
-                        <p>如果你热爱互联网，对互联网产品感兴趣
-</p>
-                        <p>喜爱设计艺术，想研发属于自己的产品
-</p>
-                        <p>还等什么，赶快加入我们吧~
-</p>
+                        <p>如果你热爱互联网，对互联网产品感兴趣</p>
+                        <p>喜爱设计艺术，想研发属于自己的产品</p>
+                        <p>还等什么，赶快加入我们吧~</p>
                     </div>
                 </div>
                 <div class="col-md-3 aboutWord" id="about3">
                     <div class="aboutTitle">
                         <span class="border"></span>
                         <div class="titleCenter">
-                        <h2>&nbsp;&nbsp;&nbsp;&nbsp;硬件维修&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                        <h2>&nbsp;&nbsp;硬件维修&nbsp;&nbsp;</h2>
                         <h3 class="titleEng">Hardware Maintenance</h3>
                         </div>
                         <span class="border"></span>
@@ -529,7 +670,7 @@
                     <div class="aboutTitle">
                         <span class="border"></span>
                         <div class="titleCenter">
-                        <h2>&nbsp;&nbsp;&nbsp;&nbsp;创意策划&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                        <h2>&nbsp;&nbsp;创意策划&nbsp;&nbsp;</h2>
                         <h3 class="titleEng" style="letter-spacing: 0.1em;">Creative Planning</h3>
                         </div>
                         <span class="border"></span>
@@ -541,18 +682,79 @@
                         <p>也是活跃在微博&微信上的段子手</p>
                     </div>
                 </div>
+                <div class="col-md-3 aboutWord" id="about5">
+                    <div class="aboutTitle">
+                        <span class="border"></span>
+                        <div class="titleCenter">
+                        <h2>&nbsp;&nbsp;创意策划&nbsp;&nbsp;</h2>
+                        <h3 class="titleEng" style="letter-spacing: 0.1em;">Creative Planning</h3>
+                        </div>
+                        <span class="border"></span>
+                    </div>
+                    <div class="aboutContent">
+                        <p>我们有着最具创意的大脑</p>
+                        <p>精心策划着社团的每一项活动</p>
+                        <p>我们不仅是在背后安排好一切的大boss</p>
+                        <p>也是活跃在微博&微信上的段子手</p>
+                    </div>
+                </div>
+                <a href="javascript:;" class="next" id="next2"></a>
             </div>
+
+            </div>
+            
         </div>
         <!-- 报名表 -->
         <div class="row row2" id="three">
-            <div class="col-md-9" class="register">
-                
+            <div class="register">
+                <div class="registerTop">
+                    <h2>我们的产品</h2>
+                </div>
+                <div class="row show"><img class="img-responsive" src="images/pic22.png" alt=""></div>
             </div>
-            <div class="col-md-3 slide slideRight">
-                
+            <div class="slideBto">
             </div>
-            
-            <a href="javascript:;" class="next" id="next4"></a>
+            <div class="slideRight">
+                <div class="slideRightTop">
+                    <p style="padding-top: 1em;padding-left: 1em;">加入我们</p>
+                    <p style="padding-left: 1em;">你从未见过如此有逼格的社团</p>
+                    <p style="padding-left: 1em;">我们愿一起陪你邂逅这段大学时光</p> 
+                </div>
+                <form class="slideForm">
+                  <p class="infoP">请填写您的报名信息</p>
+                    <div class="form-group">
+                          <label for="firstname" class="col-md-2 control-label">名字</label>
+                          <div class="col-md-9">
+                             <input type="text" class="form-control" id="firstname">
+                          </div>
+                    </div>
+                    <div class="form-group">
+                         <label for="number" class="col-md-2 control-label">手机</label>
+                         <div class="col-md-9">
+                            <input type="text" class="form-control" id="number">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                         <label for="depart" class="col-md-2 control-label">部门</label>
+                         <div class="col-md-9">
+                            <input type="text" class="form-control" id="depart">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                         <label for="name" class="col-md-2 control-label">年级</label>
+                         <div class="col-md-9">
+                             <select class="form-control" >
+                                <option>大一</option>
+                                <option>大二</option>
+                                <option>大三</option>
+                                <option>大四</option>
+                             </select>
+                         </div>
+                    </div>
+                    <button type="submit" class="btn btn-soul">Join Us</button>
+                </form>
+                <div class="glyphicon glyphicon-log-in back"></div>
+            </div>
         </div>
         <div class="row" id="four">
             <footer id="footer">
@@ -592,7 +794,7 @@
                     $("#one .bannerWord").fadeIn();
                 });
                 $('#next2').click(function(){
-                    $.goAnchor($('#two').offset().top, 1000);
+                    $.goAnchor($('#three').offset().top, 1000);
                 });
                 $('#next3').click(function(){
                     $.goAnchor($('#three').offset().top, 1000);
@@ -602,6 +804,24 @@
                 });
                 setInterval('play()',100);
                 high();
+                $(".slideBto").click(function(){
+                    $(".slideBto").hide();
+                    $(".show img").animate({
+                        right:25+'em'
+                    },1000);
+                    $(".slideRight").animate({
+                        right:0
+                    },1000);
+                });
+                });
+                $(".back").click(function(){
+                    $(".slideRight").animate({
+                        right:-115+'vw'
+                    },1000);
+                    $(".show img").animate({
+                        right:0
+                    },1000);
+                    $(".slideBto").show();
                 });
                 function play(){
                     var mTop = $('#one').offset().top;
@@ -639,10 +859,53 @@
                     }).mouseout(function(){
                         $("#about4").removeClass("highlight");
                     });
-                    $(box[0]).mouseover(function(){
-                        $("#about1").addClass("highlight");
+                    $(box[4]).mouseover(function(){
+                        $(".aboutWord").hide();
+                        $("#about5").show();
+                        $("#about5").addClass("highlight");
                     }).mouseout(function(){
-                        $("#about1").removeClass("highlight");
+                        $(".aboutWord").show();
+                        $("#about5").hide();                     
+                    });
+                    $("#about1").mouseover(function(){
+                        $(this).addClass("highlight");
+                        $(".overlay1").show().css({
+                            "background-image":"url(images/pic15.png)",
+                            "background-size":"cover"
+                        });
+                    }).mouseout(function(){
+                        $(this).removeClass("highlight");
+                        $(".overlay1").hide()
+                    });
+                    $("#about2").mouseover(function(){
+                        $(this).addClass("highlight");
+                        $(".overlay2").show().css({
+                            "background-image":"url(images/pic16.png)",
+                            "background-size":"cover"
+                        });
+                    }).mouseout(function(){
+                        $(this).removeClass("highlight");
+                        $(".overlay2").hide()
+                    });
+                    $("#about3").mouseover(function(){
+                        $(this).addClass("highlight");
+                        $(".overlay3").show().css({
+                            "background-image":"url(images/pic17.png)",
+                            "background-size":"cover"
+                        });
+                    }).mouseout(function(){
+                        $(this).removeClass("highlight");
+                        $(".overlay3").hide()
+                    });
+                    $("#about4").mouseover(function(){
+                        $(this).addClass("highlight");
+                        $(".overlay4").show().css({
+                            "background-image":"url(images/pic18.png)",
+                            "background-size":"cover"
+                        });
+                    }).mouseout(function(){
+                        $(this).removeClass("highlight");
+                        $(".overlay4").hide()
                     });
                 }
             </script>
