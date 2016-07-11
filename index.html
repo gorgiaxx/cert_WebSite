@@ -4,562 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
     <title>华东交通大学计算机紧急响应组</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"><!-- 字体图标样式 -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <style type="text/css">
-        body{
-            height: 100%;
-            width: 100%;
-            overflow-x: hidden; 
-            font-family: "Microsoft YaHei";
-        }
-        .container{
-            height: 100%;
-            background-image: url(images/banner.jpg);
-            background-size: cover;
-        }
-        .row{
-            background-attachment: fixed;
-            background-size: cover;
-            position: relative;
-            overflow-y: hidden; 
-            overflow-x: hidden; 
-        }
-        .row1{
-            background-color: #272833;
-            background-image: url("images/banner2.jpg");
-            background-position: center center;
-            box-shadow: 0 0.25vw 0.5vw 0 rgba(0, 0, 0, 0.25);
-            min-height: 100vh;
-            text-align: center;
-            z-index: 21;
-        }
-        #banner .content{
-            display: inline-block;
-            margin-right: 1%;
-            max-width: 95%;
-            padding: 13.3vw;
-            position: relative;
-            text-align: center;
-            vertical-align: middle;
-            z-index: 1;
-        }
-        .logo{
-            border-radius: 100%;
-            display: inline-block;
-            height: 16vw;
-            vertical-align: middle;
-            width: 16vw;
-        }
-        .content .bannerWord{
-            display: inline-block;
-            vertical-align: middle;
-            text-align: center;
-            margin-left: 2rem;
-        }
-        .content header p {
-            letter-spacing: 0.5rem;
-            line-height: 2em;
-            color:white;
-            text-indent: 0.2rem;
-        }
-        .content header h2{
-            font-size: 4.5rem;
-            color: white;
-            line-height: 3.5rem;
-        }
-        .content header h2 span{
-            font-size: 5rem;
-            padding-right: 1vw;
-            padding-left: 2vw;
-        }
-        .logo img{
-            border-radius: 100%;
-            display: block;
-            width: 100%;
-        }
-        .navbar-default{
-            border: none;
-            border-radius: 0;
-            background-color: rgba(0, 0, 0, 0);
-            margin-bottom: 0px;
-        }
-        #nav-title{
-            font-size: 2rem;
-            -moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            -webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            -ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            
-            text-decoration: none;
-        }
-        #nav-title:hover{
-            color: #e44c65;
-        }
-        #nav-title1{
-            font-size: 2rem;
-            -moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            -webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            -ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            
-            text-decoration: none;
-        }
-        #nav-title1:hover{
-            color: #e44c65;
-        }
-        #nav-title2{
-            font-size: 2rem;
-            -moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            -webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            -ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            
-            text-decoration: none;
-        }
-        #nav-title2:hover{
-            color: #e44c65;
-        }
-        #nav-title3{
-            font-size: 2rem;
-            -moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            -webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            -ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            
-            text-decoration: none;
-        }
-        #nav-title3:hover{
-            color: #e44c65;
-        }
-        #nav-title4{
-            font-size: 2rem;
-            -moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            -webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            -ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-            
-            text-decoration: none;
-        }
-        #nav-title4:hover{
-            color: #e44c65;
-        }
-        .nav-more{
-            float: right;
-        }
-        .navbar-default .navbar-toggle{
-            border: none;
-        }
-        .navbar-default .navbar-toggle:hover{
-            background-color: #e44c65;
-        }
-        .navbar-default .navbar-toggle:hover span{
-            background-color: white;
-        }
-        .next{
-            display: block;
-            font-size: 2rem;
-            margin-top: -2em;
-            text-align: center;
-            color: #fa7676;
-            margin: 0 auto;
-            height: 4.9vh;
-            background-image: url(images/arrow.png);
-            width: 8rem;
-            background-position: center center;
-            background-repeat: no-repeat;
-        }
-        #next1{
-            margin-top: 6vh;
-        }
-        .next:hover,.next:visited,.next:active,a:link{
-            text-decoration: none;
-            color: white;
-        }
-        .row2{
-           min-height: 100vh;
-           box-shadow: 0 0.25vw 0.5vw 0 rgba(0, 0, 0, 0.25); 
-           overflow-x: hidden;
-        }
-        #one{
-            background-image: url(images/209068-106.jpg);
-            background-position: center center;
-        }
-        #two{
-            background-image: url(images/pic03.jpg);
-            box-shadow: 0 0.25vw 0.5vw 0 rgba(0, 0, 0, 0.25);
-        }
-        .row3{
-            margin: 0; 
-            min-height: 60vh;
-            box-shadow: 0 0.25vw 0.5vw 0 rgba(0, 0, 0, 0.25);
-        }
-        .row4{
-            margin: 0; 
-            min-height: 40vh; 
-            background-color: rgba(21,27,30,0.90);
-            border-top:0.4em solid #e44c65; 
-            box-shadow: 0 0.25vw 0.5vw 0 rgba(0, 0, 0, 0.25);
-        }
-        .aboutWord{
-            height: 40vh;
-            text-align: center;
-            padding: 0;
-            padding-top: 3em;
-        }
-        .aboutWord h2,.aboutWord h3,.aboutWord p{
-            color: white;
-        }
-        .titleEng{
-            font-size: 0.9em;
-        }
-        .aboutTitle h2,.aboutTitle h3{
-            margin: 0;
-            display: block;
-        }
-        .aboutTitle{
-            margin-bottom: 1em;
-        }
-        .aboutTitle p{
-            display: block;
-        }
-        .next1{
-            left: 49.5%;
-        }
-        .clear
-        {
-            clear: both;
-        }       
-        .box
-        {
-            position: relative;
-            width: 58vh;
-            left: -120vh;
-            margin: 12vh auto;
-        }
-        .lineF, .lineS
-        {
-            position: absolute;
-            visibility: hidden;
-        }
-        .lineF{
-            left: -120vh;
-        }
-        .lineS
-        {
-            top: 17vh;
-            left: 9vh;
-        }
-        .boxF, .boxS, .boxT, .overlay
-        {
-            width: 16vh;
-            height: 19vh;
-            overflow: hidden;
-        }
-        .boxF, .boxS
-        {
-            visibility: hidden;
-        }
-        .boxF
-        {
-            transform: rotate(120deg);
-            float: left;
-            margin-left: 2.3vh;
-            -ms-transform: rotate(120deg);
-            -moz-transform: rotate(120deg);
-            -webkit-transform: rotate(120deg);
-        }
-        .boxS
-        {
-            transform: rotate(-60deg);
-            -ms-transform: rotate(-60deg);
-            -moz-transform: rotate(-60deg);
-            -webkit-transform: rotate(-60deg);
-        }
-        .boxT
-        {
-            transform: rotate(-60deg);
-            background: no-repeat 50% center;
-            background-size: 125% auto;
-            -ms-transform: rotate(-60deg);
-            -moz-transform: rotate(-60deg);
-            -webkit-transform: rotate(-60deg);
-            visibility: visible;
-        }
-        .overlay
-        {
-            transition: all 250ms ease-in-out 0s;
-            display: none;
-            position: relative;
-        }
-        .boxT:hover .overlay{
-            display: block;
-            background-size: cover;
-        }
-        .boxT:hover .overlay1
-        {
-            background-image: url(images/pic15.png);
-        }
-        .boxT:hover .overlay2
-        {
-            background-image: url(images/pic16.png);
-        }
-        .boxT:hover .overlay3
-        {
-            background-image: url(images/pic17.png);
-        }
-        .boxT:hover .overlay4
-        {
-            background-image: url(images/pic18.png);
-        }
-        .boxT:hover .overlay5
-        {
-            background-image: url(images/pic19.png);
-        }
-        #four{
-            background-color: #272833;
-            height: 30vh;
-            min-height: 250px;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .border{
-            width: 0.6em;
-            height: 50px;
-            background-color: #e44c65;
-            display: inline-block;
-            position: relative;
-            top: 0.6em;
-        }
-        .titleCenter{
-            display: inline-block;
-            margin-top: 20px;
-        }
-        .highlight{
-            background-color: rgba(21,45,64,0.7);
-        }
-        .aboutContent p{
-            font-size: 1.2em;
-        }
-        #footer .copyright {
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 1.2em;
-            line-height: 2em;
-            padding: 0;
-            text-align: center;
-        }
-        ul.icons {
-            cursor: default;
-            list-style: none;
-            padding-left: 0;
-            display: block;
-            margin: 7em auto 2em auto;
-            text-align: center;
-        }
-        ul.icons li {
-            display: inline-block;
-            height: 2.5em;
-            line-height: 2.5em;
-            padding: 0 0.5em;
-        }
-        .icon {
-            font-size: 2.2em;
-            letter-spacing: 1em;
-            color: white;
-        }
-        ul.icons li a:hover .icon{
-            color: #E44c65;
-        }
-        .slideBto{
-            width: 4vh;
-            height: 17vh;
-            background-image: url(images/pic20.png);
-            background-position: center;
-            background-size: cover;
-            position: absolute;
-            top: 40%;
-            right: 0;
-        }
-        .slide{
-            height: 100vh;
-            /*background-image: url(images/blog-2.jpg);*/
-            background-size: cover;
-            background-attachment: fixed;
-            padding: 0;
-            border-left: 0.5em solid #5480F1;
-            overflow: hidden;
-            position: relative;
-        }
-        .slideRight{
-            border-left: none;
-            min-width: 25vw;
-            height: 95vh;
-            background-color: #f85670; 
-            position: absolute;
-            right: -115vw;
-            top: 5vh;
-        }
-        .register{
-            width: 100%;
-            height: 100vh;
-            float: left;
-        }
-        #three{
-            background-image: url(images/pic21.png);
-            overflow-y: hidden;
-            margin: 0;
-            padding: 0;
-            min-height: 635px;
-        }
-        .registerTop{
-            background-color: #219e56;
-            width: 100vw;
-            height: 5vh;
-            text-align: center;
-        }
-        .registerTop h2{
-            color: white;
-            font-size: 2em;
-            line-height: 5vh;
-            margin: 0;
-        }
-        .slideRightTop p{
-            color: white;
-            font-size: 2em;
-            line-height: 1em;
-        }
-        .slideForm{
-            text-align: left;
-            padding-left: 2em;
-            padding-right: 2em;
-            margin-top: 5em;
-        }
-        .slideForm .infoP{
-            color: white;
-            font-size: 1.2em;
-            padding-left: 5em;
-        }
-        .form-group{
-            height: 3em;
-        }
-        .btn-soul{
-                background-color: rgba(0,0,0,0);
-                border: 1px solid white;
-                color: white;
-                width: 5em;
-                height: 2em;
-                font-size: 1.3em;
-                margin-top: 1.5vh;
-                margin-left: 4.6em;
-        }
-        .btn-soul:hover{
-            background-color: white;
-            color: #f85670;
-        }
-        .control-label{
-            font-weight: normal;
-            color: white;
-            font-size: 2em;
-            text-align: left;
-            margin: 0;
-            padding: 0; 
-        }
-        .form-control{
-            background-color: rgba(255,255,255,0);
-            border: 2px solid #fff;
-            border-radius: 5px;
-            color: white;
-            height: 3em;
-        }
-        .form-control option{
-            color: black;
-        }
-        .col-md-9{
-            padding: 0; 
-        }
-        @media screen and (max-width: 991px){
-
-        .form-group {
-            height: 5em;
-        }
-        .slideRight{
-            height: 100vh;
-            position: absolute;
-            top: 0;
-            min-height: 635px;
-        }
-        .registerTop{
-            display: none;
-        }
-        }
-        @media screen and (max-width: 390px) { /*当屏幕尺寸小于1569px时，应用下面的CSS样式*/  
-        .show img{
-            display: none;
-        }
-        .slideRight{
-            left: 0;
-        }
-        .back{
-            display: none;
-        }
-        }
-        #about5{
-            width: 200vh;
-            left: 0vh;
-            display: none;
-        }
-        .show img{
-            position: relative;
-        }
-        .back{
-            color: white;
-            background-image: url(images/pic23.png);
-            width: 2.89em;
-            height: 2.8em;
-            position: absolute;
-            bottom: 0;
-        }
-        .back:hover{
-            background-image: url(images/pic24.png);
-        }
-        #next2{
-            position: absolute;
-            z-index: 10;
-            left: 48%;
-            bottom: 35px;
-        }
-        @media screen and (max-width: 1250px){
-            #next2{
-                display: none;
-            }
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
     <div class="container-fluid">
+        <!-- 首屏 -->
         <div class="row row1" id="banner">
             <nav class="navbar navbar-default" role="navigation">
-           <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" 
-                       data-target="#example-navbar-collapse">
-                       <span class="sr-only">切换导航</span>
-                       <span class="icon-bar"></span>
-                       <span class="icon-bar"></span>
-                       <span class="icon-bar"></span>
-                </button>
-              <a class="navbar-brand" id="nav-title" href="#">计算机紧急响应组</a>
-           </div>
-           <div class="collapse navbar-collapse nav-more" id="example-navbar-collapse">
-              <ul class="nav navbar-nav">
-                 <li><a href="#" id="nav-title1">艺术展</a></li>
-                 <li><a href="#" id="nav-title2">名人堂</a></li>
-                 <li><a href="#" id="nav-title3">作品秀</a></li>
-                 <li><a href="#" id="nav-title4">分享区</a></li>
-              </ul>
-           </div>
+               <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" 
+                           data-target="#example-navbar-collapse">
+                           <span class="sr-only">切换导航</span>
+                           <span class="icon-bar"></span>
+                           <span class="icon-bar"></span>
+                           <span class="icon-bar"></span>
+                    </button>
+                  <a class="navbar-brand" id="nav-title" href="#">计算机紧急响应组</a>
+               </div>
+              <!--  右边导航菜单 -->
+               <div class="collapse navbar-collapse nav-more" id="example-navbar-collapse">
+                  <ul class="nav navbar-nav">
+                     <li><a href="#" id="nav-title1">艺术展</a></li>
+                     <li><a href="#" id="nav-title2">名人堂</a></li>
+                     <li><a href="#" id="nav-title3">作品秀</a></li>
+                     <li><a href="#" id="nav-title4">分享区</a></li>
+                  </ul>
+               </div>
             </nav>
             <div class="content">
                 <span class="logo">
@@ -572,7 +44,10 @@
             </div>
             <a href="javascript:;" class="next" id="next1"></a>
         </div>
+        
+        <!-- 第二屏 -->
         <div class="row row2" id="one">
+            <!-- 六边形部分 -->
             <div class="row row3" id="icons">
                 <div class="box">
                     <!--第一行(lineFirst)-->
@@ -580,24 +55,19 @@
                         <div class="boxF">
                             <div class="boxS">
                                 <div class="boxT" style="background-image: url(images/pic10.png);">
-                                    <div class="overlay overlay1">
-                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="boxF">
                             <div class="boxS">
                                 <div class="boxT" style="background-image: url(images/pic11.png);">
-                                    <div class="overlay overlay2">
-                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="boxF">
                             <div class="boxS">
                                 <div class="boxT" style="background-image: url(images/pic12.png);">
-                                    <div class="overlay overlay3">
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -608,22 +78,20 @@
                         <div class="boxF">
                             <div class="boxS">
                                 <div class="boxT" style="background-image: url(images/pic13.png);">
-                                    <div class="overlay overlay4">
-                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="boxF">
                             <div class="boxS">
                                 <div class="boxT" style="background-image: url(images/pic14.png);">
-                                    <div class="overlay overlay5">
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- 部门介绍部分 -->
             <div class="row row4" id="about">
                 <div class="col-md-3 aboutWord" id="about1">
                     <div class="aboutTitle">
@@ -693,32 +161,33 @@
                     <div class="aboutTitle">
                         <span class="border"></span>
                         <div class="titleCenter">
-                        <h2>&nbsp;&nbsp;创意策划&nbsp;&nbsp;</h2>
-                        <h3 class="titleEng" style="letter-spacing: 0.1em;">Creative Planning</h3>
+                        <h2>&nbsp;&nbsp;神秘部门&nbsp;&nbsp;</h2>
+                        <h3 class="titleEng" style="letter-spacing: 0.4em;">Mysterious</h3>
                         </div>
                         <span class="border"></span>
                     </div>
                     <div class="aboutContent">
-                        <p>我们有着最具创意的大脑</p>
-                        <p>精心策划着社团的每一项活动</p>
-                        <p>我们不仅是在背后安排好一切的大boss</p>
-                        <p>也是活跃在微博&微信上的段子手</p>
+                        <p>你喜欢神秘吗！</p>
+                        <p>在CERT，你都能找到臭味相投的小伙伴</p>
+                        <p>我们已经等你很久了！</p>
+                        <p>Come on！来CERT一起愉快地探（gao）寻（ji）吧！</p>
                     </div>
                 </div>
                 <a href="javascript:;" class="next" id="next2"></a>
             </div>
-
-            </div>
-            
         </div>
+
         <!-- 报名表 -->
         <div class="row row2" id="three">
+            <!-- 图片 -->
             <div class="register">
                 <div class="registerTop">
                     <h2>我们的产品</h2>
                 </div>
                 <div class="row show"><img class="img-responsive" src="images/pic22.png" alt=""></div>
             </div>
+
+            <!-- 弹出窗部分 -->
             <div class="slideBto">
             </div>
             <div class="slideRight">
@@ -744,7 +213,12 @@
                     <div class="form-group">
                          <label for="depart" class="col-md-2 control-label">部门</label>
                          <div class="col-md-9">
-                            <input type="text" class="form-control" id="depart">
+                            <select class="form-control" >
+                               <option>产品设计部</option>
+                               <option>技术研发部</option>
+                               <option>硬件维修部</option>
+                               <option>创意策划部</option>
+                            </select>
                         </div>
                     </div>
                     <div class="form-group">
@@ -763,6 +237,8 @@
                 <div class="back"></div>
             </div>
         </div>
+
+        <!-- 页尾 -->
         <div class="row" id="four">
             <footer id="footer">
                 <ul class="icons">
@@ -781,139 +257,7 @@
         </div>
     </div>
 </body>
-<script type="text/javascript">
-                $(function(){
-                $.extend({
-                    'goAnchor':function(to, time){
-                        $obj = (window.opera)?(document.compatMode=="CSS1Compat"?$('html'):$('body')):$('html,body');
-                        $($obj).animate({scrollTop:to}, time);
-                    }
-                });
-                //
-                $('#next1').click(function(){
-                    $.goAnchor($('#one').offset().top, 1000);
-                    $("#one .box").animate({
-                        left:0
-                    },1000);
-                    $("#one .lineF").animate({
-                        left:0
-                    },1000);
-                    $("#one .bannerWord").fadeIn();
-                });
-                $('#next2').click(function(){
-                    $.goAnchor($('#three').offset().top, 1000);
-                });
-                $('#next3').click(function(){
-                    $.goAnchor($('#three').offset().top, 1000);
-                });
-                $('#next4').click(function(){
-                    $.goAnchor($('#four').offset().top, 1000);
-                });
-                setInterval('play()',100);
-                high();
-                $(".slideBto").click(function(){
-                    $(".slideBto").hide();
-                    $(".show img").animate({
-                        right:25+'em'
-                    },1000);
-                    $(".slideRight").animate({
-                        right:0
-                    },1000);
-                });
-                });
-                $(".back").click(function(){
-                    $(".slideRight").animate({
-                        right:-115+'vw'
-                    },1000);
-                    $(".show img").animate({
-                        right:0
-                    },1000);
-                    $(".slideBto").show();
-                });
-                function play(){
-                    var mTop = $('#one').offset().top;
-                    var sTop = $(window).scrollTop();
-                    var result = mTop - sTop;
-                    if(result<998){
-                       $("#one .box").animate({
-                           left:0
-                       },1000);
-                       $("#one .lineF").animate({
-                           left:0
-                       },1000); 
-                   }
-                    };
-                function high(){
-                    var box=$(".overlay");
-                    var about=$("#about .aboutWord");
-                    $(box[0]).mouseover(function(){
-                        $("#about1").addClass("highlight");
-                    }).mouseout(function(){
-                        $("#about1").removeClass("highlight");
-                    });
-                    $(box[1]).mouseover(function(){
-                        $("#about2").addClass("highlight");
-                    }).mouseout(function(){
-                        $("#about2").removeClass("highlight");
-                    });
-                    $(box[2]).mouseover(function(){
-                        $("#about3").addClass("highlight");
-                    }).mouseout(function(){
-                        $("#about3").removeClass("highlight");
-                    });
-                    $(box[3]).mouseover(function(){
-                        $("#about4").addClass("highlight");
-                    }).mouseout(function(){
-                        $("#about4").removeClass("highlight");
-                    });
-                    $(box[4]).mouseover(function(){
-                        $(".aboutWord").hide();
-                        $("#about5").show();
-                        $("#about5").addClass("highlight");
-                    }).mouseout(function(){
-                        $(".aboutWord").show();
-                        $("#about5").hide();                     
-                    });
-                    $("#about1").mouseover(function(){
-                        $(this).addClass("highlight");
-                        $(".overlay1").show().css({
-                            "background-image":"url(images/pic15.png)",
-                            "background-size":"cover"
-                        });
-                    }).mouseout(function(){
-                        $(this).removeClass("highlight");
-                        $(".overlay1").hide()
-                    });
-                    $("#about2").mouseover(function(){
-                        $(this).addClass("highlight");
-                        $(".overlay2").show().css({
-                            "background-image":"url(images/pic16.png)",
-                            "background-size":"cover"
-                        });
-                    }).mouseout(function(){
-                        $(this).removeClass("highlight");
-                        $(".overlay2").hide()
-                    });
-                    $("#about3").mouseover(function(){
-                        $(this).addClass("highlight");
-                        $(".overlay3").show().css({
-                            "background-image":"url(images/pic17.png)",
-                            "background-size":"cover"
-                        });
-                    }).mouseout(function(){
-                        $(this).removeClass("highlight");
-                        $(".overlay3").hide()
-                    });
-                    $("#about4").mouseover(function(){
-                        $(this).addClass("highlight");
-                        $(".overlay4").show().css({
-                            "background-image":"url(images/pic18.png)",
-                            "background-size":"cover"
-                        });
-                    }).mouseout(function(){
-                        $(this).removeClass("highlight");
-                        $(".overlay4").hide()
-                    });
-                }
-            </script>
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.js"> </script>
 </html>
