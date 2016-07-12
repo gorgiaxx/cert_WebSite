@@ -63,10 +63,11 @@ body{
     margin-left: 2rem;
 }
 .content header p {
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.2rem;
     line-height: 2em;
-    color:white;
-    text-indent: 0.2rem;
+    color: white;
+    text-indent: 0rem;
+    font-size: 1.2em;
 }
 .content header h2{
     font-size: 4.5rem;
@@ -440,7 +441,20 @@ body{
 .back:hover{
     background-image: url(../images/pic24.png);
 }
-
+#success img{
+    vertical-align: middle;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 30%;
+}
+#fail img{
+    vertical-align: middle;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: 30%;
+}
 /*第二屏样式结束*/
 
 

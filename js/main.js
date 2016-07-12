@@ -28,19 +28,21 @@ $('#next4').click(function(){
 setInterval('play()',100);
 high();
 $(".slideBto").click(function(){
+    $(".imgChange").attr("src","images/pic27.png");
     $(".slideBto").hide();
     $(".show img").animate({
         right:25+'em'
-    },1000);
+    },800);
     $(".slideRight").animate({
         right:0
-    },1000);
+    },600);
 });
 });
 $(".back").click(function(){
+    $(".imgChange").attr("src","images/pic22.png");
     $(".slideRight").animate({
         right:-115+'vw'
-    },1000);
+    },2000);
     $(".show img").animate({
         right:0
     },1000);
@@ -115,11 +117,6 @@ function high(){
         $("#about5").hide();   
         $(this).css("background-image","url(images/pic14.png)");                  
     });
-
-
-
-
-
     $("#about1").mouseover(function(){
         $(this).addClass("highlight");
         $(box[0]).css({
@@ -161,4 +158,14 @@ function high(){
         $(this).removeClass("highlight");
         $(box[3]).css("background-image","url(images/pic13.png)");
     });
+}
+function slide(){
+    $("#registerFrom").hide();
+    $("#success").show();
+}
+function fail(){
+    $("#registerFrom").hide();
+    $("#fail").show();
+    setTimeout("$('#fail').hide()",1500);
+    $("#registerFrom").show();
 }

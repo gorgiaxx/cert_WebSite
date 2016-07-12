@@ -184,19 +184,18 @@
                 <div class="registerTop">
                     <h2>我们的产品</h2>
                 </div>
-                <div class="row show"><img class="img-responsive" src="images/pic22.png" alt=""></div>
+                <div class="row show"><img class="img-responsive imgChange" src="images/pic22.png" alt=""></div>
             </div>
-
             <!-- 弹出窗部分 -->
             <div class="slideBto">
             </div>
-            <div class="slideRight">
+            <div class="slideRight" id="registerFrom">
                 <div class="slideRightTop">
                     <p style="padding-top: 1em;padding-left: 1em;">加入我们</p>
                     <p style="padding-left: 1em;">你从未见过如此有逼格的社团</p>
                     <p style="padding-left: 1em;">我们愿一起陪你邂逅这段大学时光</p> 
                 </div>
-                <form class="slideForm">
+                <form class="slideForm" id="postForm">
                   <p class="infoP">请填写您的报名信息</p>
                     <div class="form-group">
                           <label for="firstname" class="col-md-2 control-label">名字</label>
@@ -213,27 +212,35 @@
                     <div class="form-group">
                          <label for="depart" class="col-md-2 control-label">部门</label>
                          <div class="col-md-9">
-                            <select class="form-control" >
-                               <option>产品设计部</option>
-                               <option>技术研发部</option>
-                               <option>硬件维修部</option>
-                               <option>创意策划部</option>
+                            <select class="form-control" id="depart">
+                               <option value="1">产品设计部</option>
+                               <option value="2">技术研发部</option>
+                               <option value="3">硬件维修部</option>
+                               <option value="4">创意策划部</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
-                         <label for="name" class="col-md-2 control-label">年级</label>
+                         <label for="grade" class="col-md-2 control-label">年级</label>
                          <div class="col-md-9">
-                             <select class="form-control" >
-                                <option>大一</option>
-                                <option>大二</option>
-                                <option>大三</option>
-                                <option>大四</option>
+                             <select class="form-control" id="grade">
+                                <option value="1">大一</option>
+                                <option value="2">大二</option>
+                                <option value="3">大三</option>
+                                <option value="4">大四</option>
                              </select>
                          </div>
                     </div>
-                    <button type="submit" class="btn btn-soul">Join Us</button>
+                    <button type="button" id="submit" class="btn btn-soul" onclick="slide()">Join Us</button>
                 </form>
+                <div class="back"></div>
+            </div>
+            <div class="slideRight" id="success" style="display: none;">
+                <img src="images/pic26.png" alt="成功">
+                <div class="back"></div>
+            </div>
+            <div class="slideRight" id="fail" style="display: none;">
+            <img src="images/pic25.png" alt="失败">
                 <div class="back"></div>
             </div>
         </div>
@@ -242,10 +249,10 @@
         <div class="row" id="four">
             <footer id="footer">
                 <ul class="icons">
-                    <li><a href=""><span class="icon icon-wechat"></span></a></li>
-                    <li><a href=""><span class="icon icon-sina-weibo"></span></a></li>
-                    <li><a href=""><span class="icon icon-github"></span></a></li>
-                    <li><a href=""><span class="icon icon-mail4"></span></a></li>
+                    <li><a href="" target="_blank"><span class="icon icon-wechat"></span></a></li>
+                    <li><a href="http://weibo.com/ecjtucert/profile?s=6cm7D0&is_all=1" target="_blank"><span class="icon icon-sina-weibo"></span></a></li>
+                    <li><a href="https://github.com/CERTeam" target="_blank"><span class="icon icon-github"></span></a></li>
+                    <li><a href="" target="_blank"><span class="icon icon-mail4"></span></a></li>
                 </ul>
                 <ul class="copyright">
                     <li>© 华东交通大学 现代教育技术中心 <a href="ecjtu.org">计算机紧急响应组 </a>交大蓝盾 赣ICP12003533号-1</li>
@@ -260,4 +267,23 @@
 <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/main.js"> </script>
+<script type="text/javascript">
+$(function(){
+    $("#submit").click(function(){
+        $.ajax({
+            url:"text.html",
+            type:"post",
+            dataType:"json",
+            data:$("#postForm").serializeArray(),
+            success:function(msg){
+                if (msg==0) {
+                    alert(msg);
+                }else{
+                    alert("你好");
+                }
+            }
+        });
+    });
+})               
+</script>
 </html>
