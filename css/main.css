@@ -170,6 +170,7 @@ body{
     margin-left: -4rem;
     left: 50%;
     bottom: 30px;
+    z-index: 12;
 }
 /*首屏样式结束*/
 
@@ -518,7 +519,7 @@ ul.icons li a:hover .icon{
     left: 0;
 }
 .back{
-    display: none;
+    bottom:10px;
 }
 }
 @media screen and (max-width: 1250px){
